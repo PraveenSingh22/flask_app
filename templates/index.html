@@ -1,0 +1,20 @@
+<h1>Hello World!!</h1>
+
+<p>This is my first webpage</p>
+
+<p>My name is {{ first_name|capitalize }}</p>
+
+<p>{{stuff | safe}}</p>  <!--safe is used to bold out html tag and striptags wil remove any tags applied-->
+
+<h3>Favourite Pizza</h3>
+{%for topping in favourite_pizza%}
+    {% if topping == 41%}
+        {{topping +100}}
+    
+    {%else%}
+        {{topping}}</br>
+
+    {%endif%} 
+{%endfor%}
+
+<h3>But my personal favorite is {{favourite_pizza[0]}} pizza</h3> <!--Calling list 0 index item-->
